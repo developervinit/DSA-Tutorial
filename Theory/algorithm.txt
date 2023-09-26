@@ -1,0 +1,79 @@
+Question 1 - What is algorithm?
+Answer - Algorithm refers to a SEQUENCE OF FINITE STEPS to solve a particular problem. Algorithms can be SIMPLE and COMPLEX depending on what you want to achieve. Algorithms are always LANGUAGE-INDEPENDENT, i.e. they are just plain INSTRUCTIONS that can be implemented in any language, and yet the output will be the same, as expected.
+
+Question 2 - What are the Characteristics of an Algorithm?
+Answer - Algorithm has 6 charechterstics.
+a) - Clear and Unambiguous: The algorithm should be clear and unambiguous. Each of its steps should be clear in all aspects and must lead to only one meaning.
+b) - Well-Defined Inputs: If an algorithm says to take inputs, it should be well-defined inputs. 
+c) - Well-Defined Outputs: The algorithm must clearly define what output will be yielded and it should be well-defined as well. 
+d) - Finite-ness: The algorithm must be finite, i.e. it should terminate after a finite time.
+e) - Feasible: The algorithm must be simple, generic, and practical, such that it can be executed with the available resources. It must not contain some future technology or anything.
+f) - Language Independent: The Algorithm designed must be language-independent, i.e. it must be just plain instructions that can be implemented in any language, and yet the output will be the same, as expected.
+
+
+Question 3 - What is Performance Analysis of an algorithm?
+Answer - When there are multiple alternative algorithms to solve a problem, we analyze them and pick the one which is best suitable for our requirements.
+
+Definition - Performance analysis of an algorithm is the PROCESS of CALCULATING SPACE and TIME required by that ALGORITHM.
+
+We have two MESSURES to perform performence analysis of an algorithm.
+
+a) - Space Complexity - Space required to complete the task of that algorithm (Space Complexity). It includes program space and data space.
+b) - Time Complexity - Time required to complete the task of that algorithm (Time Complexity).
+
+Question 4 - What is Space Complexity of an algorithm?
+Answer - Total amount of MEMORY REQUERED by the algorithm to COMPLETE its EXECUTION is called as space complexity of algorithm.
+
+space complexity can be devided into two parts
+1) CONSTANT space complexity.
+2) LINEAR space complexity.
+
+1) CONSTANT space complexity - if any algorithm needs FIXED AMOUNT OF SPACE/MEMORY for its all INPUT VALUES then that space complexity is said to be constant space complexity.
+constant space complexity is denoted by O(1).
+
+2) LINEAR space complexity - when the TOTAL AMOUNT OF MEMMORY/SPACE REQUIRED by the algorithm is increased with the increase of INPUT VALUE then that complexity is said to be linear space complexity.
+linear space complexity is denoted by O(n).
+
+
+Question 5 - What is Time Complexity of an algorithm?
+Answer - The TOTAL AMOUNT OF TIME taken by the ALGORITHM to complete its execution is called the time complexity of that algorithm.
+
+NOTE - when we calculate the time complexity of an algorithm we consider only input data. example:- we only check how our algorithm behaving for the different values to perform all the operations like arthmatic, logical, return value etc. we generally dont consider processor power, 32bit machine or 64bit, read write speed.
+
+calculating time complexity in below example:-
+ function add(a, b){
+    //1 unit time for "return"
+    //1 unit time for arthmatic "a+b"
+    return a + b;
+ }
+
+ in above algorithm 1 unit time for "return" and 1 unit time for arthmatic "a+b" then total 2 unit of time for the algorithm execution and that time is fixed.
+
+ -Time complexity can be calculated in two ways
+ 1) Contant time complexity
+ 2) Linear time complexity
+
+ 1) Constant time complexity - when the algorithm required the FIXED AMOUNT OF TIME for completing its execution for all INPUTS then that complexity said to be constant time complexity.
+ constant time complexity is denoted by O(1).
+
+ 2) Linear time complexity - when the algorithms' EXECUTION TIME increases with the increase of INPUT values then that complexity said to be linear time complexity.
+ O(n).
+
+
+Question 6 - What is Asymtomatic Notation?
+Answer - Asymtomatic notation is the mathmatial represantation of the algorithm's    complexity.
+         In asymtomatic notation, when we want to represant the complexity of algorithm we use only the MOST SIGNIFICANT terms in the complexity of algorithm and we ignore the LEAST SIGNIFICANT term in the complexity of the algorithm (here complexity can be space or time complexity).
+         example - here in 5n+1, n is the most significant term and other are least significant terms.
+
+         there are three types of asymtomatic notation to give the idea of the complexity of the algorithm.
+         1) Big-Omega(Ω) [Big Omega notation] it represent BEST case senario.
+         2) Big-Theta(θ) [Big Theta notation] it represent the AVERAGE case senario.
+         3) Big-oh(O) [Big O notation] it represnt the worst case.
+
+
+NOTE:- If your app needs to be very quick and has plenty of memory to work with, you don't have to worry about
+space complexity.
+
+NOTE:- If you have very little memory to work with, you should pick a solution that is relatively slower but needs
+less space.     
+ 
