@@ -1,0 +1,22 @@
+//When to use arrays
+1. When you need order.
+2. When you need fast acess/insertion/removal
+
+//Big O of arrays
+1. Insertion (IT DEPENDS)
+2. Removal (IT DEPENDS)
+1. Searching O(n).
+2. Acess O(1).
+
+NOTE - (It is about accessing element) So a misconception that I've seen a lot of students have. When you have a 10,000 element array and you ask for the 9000nth element, let's say JavaScript isn't going through every single element in counting all the way up to 9000 and accessing every element and then getting to the one you need and giving it to you. You can think of there's a direct shortcut to each element if you have a number, if you have an index. You can jump immediately to the data. So it doesn't matter how long the array is.
+
+NOTE - (It is about inserting/removing element) It depends on where we're inserting. Always inserting, Removing from the beginning is worse than adding to the end and removing from the end. Because when we insert or remove new element at the begning of array then array needs to change/update the index for rest of the elements in the array but when we insert/remove at the end of the array then array needs not to change/update index of the previous elements. Accessing is fast no matter where.
+
+
+
+//Big O of Array operations.
+1. pop() is O(1).  (weather elements are 1 or 1000000)
+2. push() is O(1). (weather elements are 1 or 1000000)
+3. shift() is O(n).
+4. sort() is O(n * log n).
+5. unshift() is O(n) and all others are O(n) compalixty.
