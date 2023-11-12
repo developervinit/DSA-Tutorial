@@ -10,14 +10,14 @@
 
 //Now we are doing step 2
 
-//there are some common patterns that we'll discuss that do apply to multiple problems that are common approaches to writing code sort of arche types or a problem. But that does not mean that you cover every possible scenario on earth. So it might help you in one out of five, one out of ten challenges you have to face. But even if it's only one out of ten, that's still helpful and worth knowing.
+//there are some common patterns that we'll discuss that do apply to multiple problems that are common approaches to writing code sort of arch types or a problem. But that does not mean that you cover every possible scenario on earth. So it might help you in one out of five, one out of ten challenges you have to face. But even if it's only one out of ten, that's still helpful and worth knowing.
 
 //So there are lots of these patterns and some of them have names that are official. Some of them have names, well, not official, but names that are recognized by other people, like divide and conquer, for example, or greedy algorithms.
 
 
 //So there are some patterns following which you can master to solve the problem.
-1. Frequncy counter.    
-2. Multiple pointeres.  
+1. Frequency counter.    
+2. Multiple pointers.  
 3. Sliding window.      
 4. Divide and Conquer.  
 5. Dynamic Programming. 
