@@ -24,5 +24,4 @@
 6. Greedy Algorithm.    
 7. BackTracking         
 
-
-//Note - continue in the next file video28.js 
+//Note - All problem solving patterns explained separately with examples in the same folder.
