@@ -2,11 +2,11 @@
 
 // Here we are learning that How do you get better at solving them, whether it's in an interview or on a side project working on?
 
-//So we talked about sort of two different steps for solving problems.
+//So here we are discussing two different steps for solving problems.
 1. Device a plan for solving problems.
 2. Master common problem solving patterns.
 
-//so we have step 1 in folder sec-4.
+//So according to step 1 we can device our own plan to solve a particular problem or we can use problem solving patterns.
 
 //Now we are doing step 2
 
