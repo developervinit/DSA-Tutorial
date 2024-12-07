@@ -1,19 +1,19 @@
 Question 1 - What is Data-Structure?
-Answer - Data structure is METHOD of ORGANISING LARGE AMOUNT of data more effectivily so that prforming any operation (CRUD) on that data becomes easy. every data structure has its own principles and any operation on data structure should not violate  basic principles of that data structure.
-Note - a) data structure is used to organise large amount of data.
+Answer - Data structure is METHOD of ORGANIZING LARGE AMOUNT of data more effectively so that preforming any operation (CRUD) on that data becomes easy. every data structure has its own principles and any operation on data structure should not violate  basic principles of that data structure.
+Note - a) data structure is used to organize large amount of data.
        b) every data structure has its own principle.
-       c) operation in data structure should not violate basic princile of that data structure.
+       c) operation in data structure should not violate basic principle of that data structure.
 
-data structure devidede into two parts
+data structure divided into two parts
 1) Linear data structure.
 2) Non-Linear data structure.
 
-1) Linear data structure - if data-structure organises data into SEQUENCIAL order then that data structure is called linear data structure.
+1) Linear data structure - if data-structure organizes data into SEQUENTIAL order then that data structure is called linear data structure.
 example - a) stack
           b) queue
           c) list (Linked List)
           d) arrays
-2) Non Linear data structure - if data structure organises data into RANDOM order then that data structure is called as non-linear data structure.
+2) Non Linear data structure - if data structure organizes data into RANDOM order then that data structure is called as non-linear data structure.
 example - a) heap
           b) graph
           c) tree 
@@ -21,7 +21,7 @@ example - a) heap
 
 
 Question 2 - What is stack?
-Answer - Stack is a linear data structure in which adding and deleting element operation performed based on the LIFO pronciple. in stack there is a single position which is top of the stack from where insertion and deletion operation can be perfomed.
+Answer - Stack is a linear data structure in which adding and deleting element operation performed based on the LIFO principle. in stack there is a single position which is top of the stack from where insertion and deletion operation can be performed.
 
 stack is of two types
 a) Fixed size Stack.
@@ -60,32 +60,32 @@ queue can be implemented in two ways
 
 
 Question 3 - What is Linked-List?
-Answer - Linked list is a linear data structure which has SEQUENCE OF ELEMENT and every element keeps the link or address to the next element but last element keeps the null. every element in the linked list is called node. and the first element/node is called the head-node.
+Answer - Linked list is a linear data structure which has SEQUENCE OF ELEMENTS and every element keeps the link or address to the next element but last element keeps the null. every element in the linked list is called node. and the first element/node is called the head-node.
 
 there are three variations in linked list.
 1) Singly linked list.
 2) Doubly linked list.
 3) Circular linked list.
 
-1) Singly linked list - singly linked list keeps the sequence of elements and every element is called node, every node is conssisting of two parts first part keeps the data and second part keeps the link of next node. the last node keeps the null value and the first node is called the head node in linked list.
+1) Singly linked list - singly linked list keeps the sequence of elements and every element is called node, every node is consisting of two parts first part keeps the data and second part keeps the link of next node. the last node keeps the null value and the first node is called the head node in linked list.
 
 operation of singly linked list
-a) insertion - insertion can be at begning, specific location, and at the end of the list.
-b) deletion - deletion can be at begning, specific location, and at the end of the list.
+a) insertion - insertion can be at beginning, specific location, and at the end of the list.
+b) deletion - deletion can be at beginning, specific location, and at the end of the list.
 c) display
 
-2) Doubly linked list - doubly linked list is the sequence of elements and every element is called the node which conssit of three parts. first part is to keep the link of previous node and middle part is to keep the data and third part is to keep the link of next node in doubly linked list.
-in doubly linked list we can traverse to the previous node or the next node from the perticular node.
+2) Doubly linked list - doubly linked list is the sequence of elements and every element is called the node which consist of three parts. first part is to keep the link of previous node and middle part is to keep the data and third part is to keep the link of next node in doubly linked list.
+in doubly linked list we can traverse to the previous node or the next node from the particular node.
 first node always the head node.
 the previous field of first node keeps the null.
 the next field of last node of the list always keeps the null.
 
 operation of doubly linked list
-a) insertion - insertion can be at begning, specific location, and at the end of the list.
-b) deletion - deletion can be at begning, specific location, and at the end of the list.
+a) insertion - insertion can be at beginning, specific location, and at the end of the list.
+b) deletion - deletion can be at beginning, specific location, and at the end of the list.
 c) display.
 
-3) Circular linked list - Circular linked list is a sequence of elements and every element is called node, node conssisting of two parts first part is to keep the data and second part is to keep the link of the next node. in circular linked list the last node is to keep the link of first node.
+3) Circular linked list - Circular linked list is a sequence of elements and every element is called node, node consisting of two parts first part is to keep the data and second part is to keep the link of the next node. in circular linked list the last node is to keep the link of first node.
 
 Question 4 - What is an Array?
 Answer - Whenever we want to work with large number of data values, we need to use that much number of different variables. As the number of variables are increasing, complexity of the program also increases and programmers get confused with the variable names. There may be situations in which we need to work with large number of similar data values. To make this work more easy, C programming language provides a concept called "Array".

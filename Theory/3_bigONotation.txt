@@ -1,7 +1,7 @@
 
-*) To messuer the space and time complexity of the perticular algorithm and then denote that complexity as NUMERIC represantaion we use Big O Notation. 
-- Big O noation is the numeric representation of the performence of the code.
-- Big O notation is the NUMERIC represantation of time and space complexity of the algorithm.
+*) To measure the space and time complexity of the particular algorithm and then denote that complexity as NUMERIC representation we use Big O Notation. 
+- Big O notation is the numeric representation of the performance of the code.
+- Big O notation is the NUMERIC representation of time and space complexity of the algorithm.
 
 -- When we need it?
 Answer - 1) It's important to have a precise vocabulary to talk about how our code performs. 
@@ -10,30 +10,30 @@ Answer - 1) It's important to have a precise vocabulary to talk about how our co
          4) it comes up in interview.
 
 
--- what is the criterian of being a better algorithm?
+-- what is the criterion of being a better algorithm?
 Answer - 1) Algorithm should be faster. (time complexity)
          2) Less-memory intensive. (space complexity)
          3) More readable code (less important)
 
 -- we can use timers to know the execution time of algorithms
-   a) performence.now(); this is a function in browser.
+   a) performance.now(); this is a function in browser.
    example:- 
-           let t1 = performnece.now();
+           let t1 = performance.now();
            //execute your function here
-           let t2 = performnece.now();
+           let t2 = performance.now();
            console.log(Time Elapsed: `${ti - t2 / 1000} Seconds`)
    Note:- timers are not giving precise result for the following reasons
-          - Different machine will recored different time for the same algorithm.
+          - Different machine will record different time for the same algorithm.
           - the same can also record different time.
-          - if algo takes hours so will have to run machine for hours which is not feasable.
-          it means we should go for different approach to meassure the time complexity of algorithm because timers dont give the precise result.
+          - if algo takes hours so will have to run machine for hours which is not feasible.
+          it means we should go for different approach to measure the time complexity of algorithm because timers don't give the precise result.
 
-          what if code takes an hour something massive, and we are comparing it to another version that takes 4 hours. then we dont want to have run test to figure out which one is faster. then we want to assign a value in general terms to talk about how code compares to other code without having to go through all of this (timers) and that where big O notation comes in.         
+          what if code takes an hour something massive, and we are comparing it to another version that takes 4 hours. then we don't want to have run test to figure out which one is faster. then we want to assign a value in general terms to talk about how code compares to other code without having to go through all of this (timers) and that where big O notation comes in.         
 
 
--- We are counting operations in a adding upto function(algorithm);
+-- We are counting operations in a adding up to function(algorithm);
 
-   //adding upto function in which if n value is given then it will add upto that n value and will return one value.
+   //adding up to function in which if n value is given then it will add upto that n value and will return one value.
 
    function addUpto(n){
         var total = 0;   //l1
@@ -48,62 +48,62 @@ Answer - 1) Algorithm should be faster. (time complexity)
    //lets count operation in addUpto function (I have given special identity to each line like l1, l2 to refer line of code);
    1) - calling addUpto(10) function with argument 10;
    2) - on line l1 the operation is 1 because there is only one assigning operation will happen;
-   3) - on line l2 in the for-loop "var i = 1" has operation 1, so the total operation is 1 + 1 =  2, then we have this "i <= n.length" condition for comparision in which comparision will happen upto the length of n numbers and value of n is 10 it means operation will be 10, then ahead in the loop we have "i++" it means we will have n addition and n assinments it means operation will be 20, so the total operation is 2 + 10 + 20 = 32;
-   4) - on line l3 we have n assingnments and n additions it means 10 assignments and 10 additions, so the total operation is 32 + 20 = 52;
+   3) - on line l2 in the for-loop "var i = 1" has operation 1, so the total operation is 1 + 1 =  2, then we have this "i <= n.length" condition for comparison in which comparison will happen up to the length of n numbers and value of n is 10 it means operation will be 10, then ahead in the loop we have "i++" it means we will have n addition and n assignments it means operation will be 20, so the total operation is 2 + 10 + 20 = 32;
+   4) - on line l3 we have n assignments and n additions it means 10 assignments and 10 additions, so the total operation is 32 + 20 = 52;
    or we can write a formula to get the total operation that is here "5n + 2" which is also concluded to 52.
    lets know how we put values into the formula like "5n + 2" because we have 5 n operations and 2 constant operation so it becomes 5_n_operations + 2_constant_operations = total_operations.
    5_n_operations are explained below
-    a) - "i <= n.length" this peace of code has n-comparitions and n value is 10 it means 10 compariotions 
+    a) - "i <= n.length" this peace of code has n-compactions and n value is 10 it means 10 compactions 
     b) - "i++" this peace of code has n additions and n assignments that is why 20 operations. 
     c) - "total += i" this peace of code has n additions and n assignments that is why 20 operations.
    
 
--- Big O noation is a way to FORMALIZE FUZZY COUNTING. it allows us to talk formaly about how runtime of the algorithm grows as the input grow. 
+-- Big O notation is a way to FORMALIZE FUZZY COUNTING. it allows us to talk formally about how runtime of the algorithm grows as the input grow. 
    Definition - We say that an algorithm is O(f(n)) if the number of simple operations the computer has to do is eventually less then a constant times f(n), as n increases.
 
-   //there are bunch of options. here f is funtion and n is input
+   //there are bunch of options. here f is function and n is input
    1. f(n) could be linear (f(n) = n).
    2. f(n) could be quadratic (f(n) = n^2).
    3. f(n) could be constant (f(n) = 1). 
-   4. f(n) could be somthing entirely different.
+   4. f(n) could be something entirely different.
 
 //More Understanding:-
- O(f(1)) -> If an algorithm/function has O(f(1)) time complexity then it means whatever size of input you put into that algorithm/function like f(2) or f(200) or f(2000) then the execution time of algorithm will remain same. it means if function f(2) takes 2sec to get executed with input "2" then that same function with different input like f(200) or f(2000) will also take the same amount of time to get executed means execution time will not increase with the increase of input in the same function. so this is called the O(f(1)) time comlexity of an algorithm.
+ O(f(1)) -> If an algorithm/function has O(f(1)) time complexity then it means whatever size of input you put into that algorithm/function like f(2) or f(200) or f(2000) then the execution time of algorithm will remain same. it means if function f(2) takes 2sec to get executed with input "2" then that same function with different input like f(200) or f(2000) will also take the same amount of time to get executed means execution time will not increase with the increase of input in the same function. so this is called the O(f(1)) time complexity of an algorithm.
 
- O(f(n)) -> If an algorithm/function has O(f(n)) time complexity then it means whatever size of input you put into that algorithm/function like f(2) or f(200) or f(2000) then the execution time of algorithm will increse with increase of input. it means if function f(2) takes 2sec to get executed with input "2" then that same function with different input like f(200) or f(2000) will also take the increased amount of time like 10sec or 100sec respectively to get executed means execution time will increase with the increase of input in the same function. so this is called the O(f(n)) time comlexity of an algorithm.
+ O(f(n)) -> If an algorithm/function has O(f(n)) time complexity then it means whatever size of input you put into that algorithm/function like f(2) or f(200) or f(2000) then the execution time of algorithm will increase with increase of input. it means if function f(2) takes 2sec to get executed with input "2" then that same function with different input like f(200) or f(2000) will also take the increased amount of time like 10sec or 100sec respectively to get executed means execution time will increase with the increase of input in the same function. so this is called the O(f(n)) time complexity of an algorithm.
 
- O(f(n^2)) -> If an algorithm/function has O(f(n^2)) time complexity then it means whatever size of input you put into that algorithm/function like f(2) or f(200) or f(2000) then the execution time of algorithm will increse with increase of input quadractically. it means if function f(2) takes 2sec to get executed with input "2" then that same function with different input like f(200) or f(2000) will also take the increased amount of time like 100sec or 10000sec respectively to get executed means execution time will increase with the increase of input quadractically in the same function. so this is called the O(f(n^2)) time comlexity of an algorithm.
- ex:- if your algorithm has time complexity O(f(n^2)) and you call it with input f(200) then we should assume that, that algorithm is called with quadratic input like  f(200 * 200) it means that this algorithm's execution time will be similer to execution time of algorithm which was called with f(40000) input.
+ O(f(n^2)) -> If an algorithm/function has O(f(n^2)) time complexity then it means whatever size of input you put into that algorithm/function like f(2) or f(200) or f(2000) then the execution time of algorithm will increase with increase of input quadratically. it means if function f(2) takes 2sec to get executed with input "2" then that same function with different input like f(200) or f(2000) will also take the increased amount of time like 100sec or 10000sec respectively to get executed means execution time will increase with the increase of input quadratically in the same function. so this is called the O(f(n^2)) time complexity of an algorithm.
+ ex:- if your algorithm has time complexity O(f(n^2)) and you call it with input f(200) then we should assume that, that algorithm is called with quadratic input like  f(200 * 200) it means that this algorithm's execution time will be similar to execution time of algorithm which was called with f(40000) input.
 
 
   -- Counting is hard
-       Depending on where we count, the number of operations can be as low as 2n or as high as 5n + 2. but regqardless of the exact number the number of operations roughly propotionally with n. if n doubles the number of operations will also roughly doubles.
-  -- there are some rule of thums to determine the time complexity.
-       when determining the time complexity of an algorithm. there are some helpful rule of thumb for big O exprestion.
+       Depending on where we count, the number of operations can be as low as 2n or as high as 5n + 2. but regardless of the exact number the number of operations roughly proportionally with n. if n doubles the number of operations will also roughly doubles.
+  -- there are some rule of thumb to determine the time complexity.
+       when determining the time complexity of an algorithm. there are some helpful rule of thumb for big O expression.
        these rule of thumb are the consequences of the definition of the big O notation.
-       1. Costant dont matter:-
-            a) O(2n) simplifies to O(n).  (dont matter the constant)
-            b) O(500) simplifies to O(1).  (dont matter the constant)
-            c) O(13n^2) simplifies to O(n^2) (dont matter the constant)
-       2. Smaller terms dont matter:-
+       1. Constant don't matter:-
+            a) O(2n) simplifies to O(n).  (don't matter the constant)
+            b) O(500) simplifies to O(1).  (don't matter the constant)
+            c) O(13n^2) simplifies to O(n^2) (don't matter the constant)
+       2. Smaller terms don't matter:-
             a) O(n + 10) simplifies to O(n).
             b) O(1000n + 50) simplifies to O(n).  
             c) O(n^2 + 5n + 8) simplifies to O(n^2).  
   -- Big O shorthand
-       Analyzing complexity with big O can get complicated. there are several rule of thums that can help but these rule will not always work but are a helpful starting point.
-         1. Arthmatic operations are constant.
+       Analyzing complexity with big O can get complicated. there are several rule of thumb that can help but these rule will not always work but are a helpful starting point.
+         1. Arithmetic operations are constant.
          2. variable assignment is constant.
-         3. Accesing element in an array(by index) or object (by key) is constant.
-         4. in a loop the complexity is the length of the loop times the compexity of whatever happens inside of the loop.
+         3. Accessing element in an array(by index) or object (by key) is constant.
+         4. in a loop the complexity is the length of the loop times the complexity of whatever happens inside of the loop.
 
 
-  -- We can also use big O notation to analyze the space complexity. how much additional memory do we need to alocate in order to run the code in our algorithm? 
-  -- sometimes you will hear the terms auxilary space complexity to refer to space required by the algorithm, not including space taken up by the inputs. So unless otherwise noted, when we talk about space complexity, technically we're talking about auxiliary.
+  -- We can also use big O notation to analyze the space complexity. how much additional memory do we need to allocate in order to run the code in our algorithm? 
+  -- sometimes you will hear the terms auxiliary space complexity to refer to space required by the algorithm, not including space taken up by the inputs. So unless otherwise noted, when we talk about space complexity, technically we're talking about auxiliary.
 
-  //EXPALINATION OF:- not including space taken up by the inputs
-  it means suppose we have 4 algorithm with diffrent space complexity to solve a perticular problem then we pass input that is array with length of 50 elements then it means each algorithms out of 4 needs same amount of space for the input which is array with 50 elements. and all 4 algorithm has different logic so they will use extra space differently according their logic so that space will be counted for the space complexity. 
+  //EXPLANATION OF:- not including space taken up by the inputs
+  it means suppose we have 4 algorithm with different space complexity to solve a particular problem then we pass input that is array with length of 50 elements then it means each algorithms out of 4 needs same amount of space for the input which is array with 50 elements. and all 4 algorithm has different logic so they will use extra space differently according their logic so that space will be counted for the space complexity. 
   
-  Basic rule of thumb of space compexity in js:-
+  Basic rule of thumb of space complexity in js:-
     1. Most primitives, things like Booleans numbers, undefined, null and JavaScript are constant space.
     2. String require O(n) space (where n is the string length).
        ex - If string grows to 50 characters, the string takes up 50 times more space than a single character string.
@@ -121,7 +121,7 @@ Answer - 1) Algorithm should be faster. (time complexity)
      }  
 
      //so this above function(algorithm) has O(1) space complexity.
-     //when we are adding new variable based of the length of array and for other base then the space complexity increases. not adding new variable means not creating new varible.
+     //when we are adding new variable based of the length of array and for other base then the space complexity increases. not adding new variable means not creating new variable.
 
   -- example of linear space complexity 
     
@@ -130,23 +130,23 @@ Answer - 1) Algorithm should be faster. (time complexity)
         let newArr = [];   // count 1 (one variable is created)
         for (let i = 0; i < arr.length; i++){  //count 1 (becoz "let i = 0")
                 
-                //newArr length will increaase to n according the "arr" length which can be n it means the space that's taken up is directly proportionate to the n to the input array. 
+                //newArr length will increase to n according the "arr" length which can be n it means the space that's taken up is directly proportionate to the n to the input array. 
                 newArr.push(2 * arr[i]);  //count n
         }
         return newArr;
      } 
 
      //so this above function(algorithm) has O(n + 2) space complexity which will be simplified to O(n).
-     //because newArr's length will increse accroding the size of the input value's length and input value is an "arr", it means newArr will take the space in memmory according the input array's length. 
+     //because newArr's length will increase according the size of the input value's length and input value is an "arr", it means newArr will take the space in memory according the input array's length. 
 
 
-  -- What is logrithm?
-  Ans - We've encountered some of the most common complexities: O(1), O(n), O(n^2). sometimes big O expressions involve more complex mathmatical expressions one that appears more often then you might like is the algorithm.
-  Definition - the logirithm of a number roughly messures the numbers the number of times you can divide that number by 2 before you get a value that is less then or equal to one. 
+  -- What is logarithm?
+  Ans - We've encountered some of the most common complexities: O(1), O(n), O(n^2). sometimes big O expressions involve more complex mathematical expressions one that appears more often then you might like is the algorithm.
+  Definition - the logarithm of a number roughly measures the numbers the number of times you can divide that number by 2 before you get a value that is less then or equal to one. 
 
   ex -
-      log base 2 of (value) = exponent  "inversly-propotinate-to"   2^exponent = value
-      log base 2 of (8)     =     3     "inversly-propotinate-to"   2^3 = 8
+      log base 2 of (value) = exponent  "inversely-proportionate-to"   2^exponent = value
+      log base 2 of (8)     =     3     "inversely-proportionate-to"   2^3 = 8
       
       note - we will omit 2 from the "log base 2".
       note - logarithmic time complexity is great. "O(log n)" complexity is always better then 
@@ -160,7 +160,7 @@ Answer - 1) Algorithm should be faster. (time complexity)
              5. O(n^2)
 
 
-NOTE - understanding how "log base 2 of 8 = 3" is propotionate to 2^3 = 8;
+NOTE - understanding how "log base 2 of 8 = 3" is proportionate to 2^3 = 8;
 Answer -  log base 2 of 8 = x
           2^x = 8
           2^x = 2^3 (2 is canceled with each other)
@@ -177,4 +177,3 @@ space complexity.
 
 NOTE:- If you have very little memory to work with, you should pick a solution that is relatively slower but needs
 less space.
-
