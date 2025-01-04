@@ -9,6 +9,6 @@
 4. Searching O(n); (when you search for the value not the key)
 
 
-//NOTE - For all the basic operations, there is no order, so there's no beginning of the object, there's no end. So it doesn't matter where you insert because there is no where.That's a bad way of putting it. But you can't insert at the beginning or in the middle or the end of the object. There's no repercussions. You just add in using a key. So insertion removal and access are all constant time. very quick
+//NOTE - For all the basic operations, there is no order, so there's no beginning of the object, there's no end. So it doesn't matter where you insert because there is no where.That's a bad way of putting it. But you can't insert at the beginning or in the middle or the end of the object. There's no repercussions. You just add in using a key. So insertion, removal, and access are all constant time. very quick
 
 //Searching O(n) - searching, however, is O(n) it's linear time. And when we say searching, it doesn't mean looking for a key, for example, first name, because accessing information with a key is constant time. What I'm talking about is checking to see if a given piece of information is in a value somewhere. We would potentially have to check every single item, every property. it means searching the value of key and not the key.

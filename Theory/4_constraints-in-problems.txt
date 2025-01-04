@@ -10,13 +10,13 @@
 //In simple words:- So what we can conclude is that the constraints always help you to plan which data structure/algorithm is to be followed to solve a computing problem .
 
 
-//Lets understand it by two example with low and high constraints:- 
+//Lets understand it by two examples with low and high constraints:- 
 
 //Ex1:- When the problem has low constraints. 
 
   -First we have to understand the fact that a cpu/computing-machine can do 10^8 operations in one second.
 
-  -Then suppose we have some problem like "sort a list of given number" and this problem has certain constraint which is described below
+  -Then suppose we have some problem like "sort a list of given number" and this problem has certain constraint which is described below.
 
     //constraint
     1 <= N <= 1000
@@ -24,9 +24,10 @@
     //Explained above constraints:-
     N -> N is an input value
     1 -> 1 is an Minimum input value (algorithm accepts at least 1 input it means n has to at leas 1)
-    1000 -> 1000 is Maximum input value (algorithm can't accept more then 1000 input it means n can not be more then 1000)
+    1000 -> 1000 is Maximum input value (algorithm can't accept more then 1000 input it means n can not be more then 1000).
+    so we can say that above constraint equation "1 <= N <= 1000" has to be true like "1 <= 1 <= 1000" or "1 <= 1000 <= 1000" and can not be "1 <= 0 <= 1000" and "1 <= 1001 <= 1000"
 
-  -So here even if you use an algorithm "bubble sort" whose time complexity is O(n^2) for sorting the given number then it would work without an problem. The reason being that a computing-machine can do up to 10^8 computations per second.
+  -So here even if you use an algorithm "bubble sort" whose time complexity is O(n^2) for sorting the given number then it would work without an problem. The reason being that a computing-machine can do up to 10^8 computations per second. it means that input is 1000 into algorithm which use "bubble sort" logic then its time complexity will be Of(n^2) which is something like O(f(1000^2)) which becomes O(f(1000000)) and cpu's computational power is 10^8 which is 100000000 so it means cpu can execute this algorithm with in the time limit and we will not get TLE. 
   
   //Explained why time limit will not exceed when we use bubble sort:-
   1. We know that computer does 10^8 computations per second it means 100000000 computation per second.
@@ -39,7 +40,7 @@
 
 //Ex2:- When the problem has very high constraints. 
 
-  So the problem is same like ex1 "sort a list of given number" and this problem has certain constraint which is described below. So in such a case your mind should come up with solution in which complexity is O(log n) instead of O(n) and O(n^2). because even O(n) would time out explained below.
+  So the problem is same like example-1 "sort a list of given number" and this problem has certain constraint which is described below. So in such a case your mind should come up with solution in which complexity is O(log n) instead of O(n) and O(n^2). because even O(n) would time out explained below.
 
   //constraint
     1 <= N <= 10^18
@@ -51,7 +52,7 @@
 
   -So here we can not use bubble sort because its time complexity is O(n^2) and even we can not use algorithm whose time complexity is O(n) because as we know when n=10^18 and we put it into O(n) like O(10^18) and we put it into O(n^2) like O(10^18+2) then the algorithms' number of operations exceeds the computer's number of operations which is 10^8 per second. it means we can not use algorithms whose time complexities are O(n) and O(n^2). So we need an algorithm whose time complexity is O(log n).
 
-NOTE:- Suppose in a problem , if you think that solution for a problem is O(n^2) / any other polynomial complexity , then here Dynamic programming can help you to optimize the solution .
+NOTE:- Suppose in a problem , if you think that solution for a problem is O(n^2) / any other polynomial complexity , then here Dynamic programming can help you to optimize the solution.
 
 
 //So here below we have "Common time complexities" table to have idea that what size of input suitable for which time complexity:-
@@ -83,3 +84,51 @@ NOTE:- Suppose in a problem , if you think that solution for a problem is O(n^2)
 
 
 NOTE:- If some algorithm has n^2 complexity it means that whatever number of input passing into the algorithm will be multiplied by itself and then algorithm will do that much operations such as if we pass 1000 input in algorithm whose complexity is n^2 then n=1000 and then 1000^2 it means 1000 * 1000 which becomes 1000000 so we can assume that, that algorithm is accepting 1000000 input or we can say that, that algorithm is performing 1000000 operations.
+
+
+//More explanation with example:--------------------------------------------
+
+
+//There is a problem  "minimum bribe" on hacker rank that has "constraint" and "subtask" part which we are going to understand step by step. 
+
+These are the given constraint and subtask:-
+
+//Constraints:-
+ 1<=t<=10, 
+ 1<=n<=10^5. 
+
+//Subtasks:-
+ for 60% score 1<=n<=10^3, 
+ for 100% score 1<=n<=10^5.
+
+//Constraints Explanation:- 
+"1<=t<=10" This means there will be at most 10 test cases (or inputs) to consider. The variable "t" typically denotes the number of test cases.
+
+"1<=n<=10^5" Here, "n" represents the size of the input. The minimum value for "n" is 1, and the maximum value is 10^5 (which is 100,000).
+
+//Subtasks Explanation:-
+It is Partial Scoring Mechanism: Many competitive programming problems reward partial points for solving smaller cases. If your solution is efficient for "n≤1000" but not for "n≤100,000" you still earn 60% of the total points.
+Let's understand it:-
+--So when we have input range "1<=n<=10^3" then maximum input will be 1000 then the algorithms with O(n^2) time-complexity might be acceptable because O(n^2) => O(1000^2) => 1000000 which is manageable within typical time limits (10^8) of cpu. However, 
+--when we have input range "1<=n<=10^5" then maximum input will be 100000 then the algorithms with O(n^2) time-complexity is not feasible because time-complexity is O(n^2) then becomes O(100000^2) => 10000000000 operations which exceeds the typical time limits (10^8) of cpu.
+so If you're pressed for time, you can aim to solve the smaller constraint first to secure 60% of the points. Later, optimize your algorithm for larger inputs (n≤10^5) to achieve the full score.
+
+For 60% score: This indicates the range of values for "n" that need to be considered to achieve 60% of the total score for the problem. In this case, "n" should be within the range. 1<=n<=10^3 (1 to 1000).
+
+For 100% score: To get the full score for the problem, participants need to handle the larger input size efficiently. Therefore, the solution needs to work for the entire range specified in the constraints, which is 1<=n<=10^5 (1 to 100,000).
+
+Now, let's explain it step by step:
+
+-The constraints specify the limitations on the input size. For t, there can be at most 10 test cases to handle, and for each test case, the input size n can vary.
+-The solution needs to handle inputs efficiently within these constraints. The larger constraint (1<=n<=10^5) requires an efficient algorithm to handle a larger input size up to 100,000. so our algorithms' time complexity should not be O(n^2) but it can be O(n), O(log n), O(n).
+
+More Explanation:-
+For each test case, the input size n can go up to 100,000.
+Since n is large, the algorithm must be efficient. Quadratic time complexity O(n^2) is generally infeasible for this size because: O(n^2) for n=100,000 would result in 10^10 operations, which is computationally expensive and would likely exceed time limits.
+Linear O(n), logarithmic O(log n), or constant O(1) time complexities are preferred.
+
+-Subtasks define variations in the problem's requirements. In this case:
+ --To get 60% of the total score, the solution should be able to handle smaller inputs efficiently within the range 1<=n<=10^3 (1 to 1000).
+ --To achieve the full 100% score, the solution must handle larger inputs efficiently up to 10^5 (100,000).
+ 
+In summary, participants need to develop an algorithm that efficiently solves the minimum bribe problem for different input sizes. They should aim to create a solution that works for both smaller input sizes (subtask 1) and larger input sizes (subtask 2) to maximize their score in the programming contest.

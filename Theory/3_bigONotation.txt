@@ -15,7 +15,7 @@ Answer - 1) Algorithm should be faster. (time complexity)
          2) Less-memory intensive. (space complexity)
          3) More readable code (less important)
 
--- we can use timers to know the execution time of algorithms
+-- Why don't we use timers to know the execution time of algorithms
    a) performance.now(); this is a function in browser.
    example:- 
            let t1 = performance.now();
@@ -31,11 +31,11 @@ Answer - 1) Algorithm should be faster. (time complexity)
           what if code takes an hour something massive, and we are comparing it to another version that takes 4 hours. then we don't want to have run test to figure out which one is faster. then we want to assign a value in general terms to talk about how code compares to other code without having to go through all of this (timers) and that where big O notation comes in.         
 
 
--- We are counting operations in a adding up to function(algorithm);
+-- We are counting operations in a addUpTo function(algorithm);
 
-   //adding up to function in which if n value is given then it will add upto that n value and will return one value.
+   //addUpTo function in which if n value is given then it will add up to that n value and will return one value.
 
-   function addUpto(n){
+   function addUpTo(n){
         var total = 0;   //l1
         for(var i = 1; i <= n.length; i++){  //l2
              total += i;  //l3
@@ -43,17 +43,17 @@ Answer - 1) Algorithm should be faster. (time complexity)
         return total;
    }
 
-   addUpto(10);
+   addUpTo(10);
 
-   //lets count operation in addUpto function (I have given special identity to each line like l1, l2 to refer line of code);
-   1) - calling addUpto(10) function with argument 10;
+   //lets count operation in addUpTo function (I have given special identity to each line like l1, l2 to refer line of code);
+   1) - calling addUpTo(10) function with argument 10;
    2) - on line l1 the operation is 1 because there is only one assigning operation will happen;
    3) - on line l2 in the for-loop "var i = 1" has operation 1, so the total operation is 1 + 1 =  2, then we have this "i <= n.length" condition for comparison in which comparison will happen up to the length of n numbers and value of n is 10 it means operation will be 10, then ahead in the loop we have "i++" it means we will have n addition and n assignments it means operation will be 20, so the total operation is 2 + 10 + 20 = 32;
    4) - on line l3 we have n assignments and n additions it means 10 assignments and 10 additions, so the total operation is 32 + 20 = 52;
    or we can write a formula to get the total operation that is here "5n + 2" which is also concluded to 52.
    lets know how we put values into the formula like "5n + 2" because we have 5 n operations and 2 constant operation so it becomes 5_n_operations + 2_constant_operations = total_operations.
    5_n_operations are explained below
-    a) - "i <= n.length" this peace of code has n-compactions and n value is 10 it means 10 compactions 
+    a) - "i <= n.length" this peace of code has n-comparison and n value is 10 it means 10 comparison 
     b) - "i++" this peace of code has n additions and n assignments that is why 20 operations. 
     c) - "total += i" this peace of code has n additions and n assignments that is why 20 operations.
    
@@ -78,7 +78,7 @@ Answer - 1) Algorithm should be faster. (time complexity)
 
   -- Counting is hard
        Depending on where we count, the number of operations can be as low as 2n or as high as 5n + 2. but regardless of the exact number the number of operations roughly proportionally with n. if n doubles the number of operations will also roughly doubles.
-  -- there are some rule of thumb to determine the time complexity.
+  -- there are some rules of thumb to determine the time complexity.
        when determining the time complexity of an algorithm. there are some helpful rule of thumb for big O expression.
        these rule of thumb are the consequences of the definition of the big O notation.
        1. Constant don't matter:-
@@ -97,14 +97,41 @@ Answer - 1) Algorithm should be faster. (time complexity)
          4. in a loop the complexity is the length of the loop times the complexity of whatever happens inside of the loop.
 
 
-  -- We can also use big O notation to analyze the space complexity. how much additional memory do we need to allocate in order to run the code in our algorithm? 
-  -- sometimes you will hear the terms auxiliary space complexity to refer to space required by the algorithm, not including space taken up by the inputs. So unless otherwise noted, when we talk about space complexity, technically we're talking about auxiliary.
+  -- We can also use big O notation to analyze the space complexity.
+  Big O notation can be used to analyze space complexity in the same way it’s used for time complexity. It helps us to understand how much amount of memory an algorithm uses when grows with the size of the input.
+  Using Big O notation for space complexity helps developers choose efficient algorithms that use minimal memory. This is especially important for systems with limited memory or when working with very large inputs.
 
-  //EXPLANATION OF:- not including space taken up by the inputs
-  it means suppose we have 4 algorithm with different space complexity to solve a particular problem then we pass input that is array with length of 50 elements then it means each algorithms out of 4 needs same amount of space for the input which is array with 50 elements. and all 4 algorithm has different logic so they will use extra space differently according their logic so that space will be counted for the space complexity. 
+  Here’s how it works:
+  1. Constant Space – O(1):-
+  The algorithm uses a fixed amount of extra memory regardless of the input size.
+  Example: Swapping two numbers or finding the maximum in an array without using additional data structures.
+
+  2. Linear Space – O(n):
+  The memory usage grows linearly with the size of the input.
+  Example: Storing a copy of the input array or using recursion where the depth depends on the input size.
+
+  3. Quadratic Space – O(n²):
+  The memory usage grows quadratically as the input size increases.
+  Example: Using a 2D matrix of size n × n.
+
+  4. Logarithmic Space – O(log n):
+  The algorithm uses memory proportional to the logarithm of the input size.
+  Example: Recursive binary search, where each level of recursion halves the search space.
+
+
+  -- Auxiliary space:- sometimes you will hear the terms auxiliary space complexity to refer to space required by the algorithm, not including space taken up by the inputs. So unless otherwise noted, when we talk about space complexity, technically we're talking about auxiliary space.
+
+  Auxiliary space is the additional memory or temporary space that an algorithm needs to solve a problem. This is separate from the space used to store the input data. It includes things like variables, recursion stack, and temporary arrays that the algorithm creates while running.
+
+  For example:-
+    --If you sort a list using an algorithm like merge sort, it requires extra memory to store temporary arrays during merging. This extra memory is the auxiliary space.
+    --On the other hand, an algorithm like insertion sort sorts the data in place without needing much extra memory, so its auxiliary space is small.
+    
+  When we talk about space complexity, it usually includes both the auxiliary space and the space taken by the input data. But if only the auxiliary space is mentioned, it refers specifically to the extra memory used by the algorithm.
+   
   
   Basic rule of thumb of space complexity in js:-
-    1. Most primitives, things like Booleans numbers, undefined, null and JavaScript are constant space.
+    1. Most primitives, things like Booleans, numbers, undefined, null require constant space.
     2. String require O(n) space (where n is the string length).
        ex - If string grows to 50 characters, the string takes up 50 times more space than a single character string.
     3. Reference types(arrays and objects) are O(n) where n is the length (for arrays) or the number of keys (for objects).
@@ -121,7 +148,7 @@ Answer - 1) Algorithm should be faster. (time complexity)
      }  
 
      //so this above function(algorithm) has O(1) space complexity.
-     //when we are adding new variable based of the length of array and for other base then the space complexity increases. not adding new variable means not creating new variable.
+     //when we are adding new variable based on the length of array and for other base then the space complexity increases. not adding new variable means not creating new variable.
 
   -- example of linear space complexity 
     
@@ -142,7 +169,7 @@ Answer - 1) Algorithm should be faster. (time complexity)
 
   -- What is logarithm?
   Ans - We've encountered some of the most common complexities: O(1), O(n), O(n^2). sometimes big O expressions involve more complex mathematical expressions one that appears more often then you might like is the algorithm.
-  Definition - the logarithm of a number roughly measures the numbers the number of times you can divide that number by 2 before you get a value that is less then or equal to one. 
+  Definition - the logarithm of a number roughly measures the numbers of times you can divide that number (n) by 2 before you get a value that is less then or equal to one. 
 
   ex -
       log base 2 of (value) = exponent  "inversely-proportionate-to"   2^exponent = value
@@ -177,3 +204,93 @@ space complexity.
 
 NOTE:- If you have very little memory to work with, you should pick a solution that is relatively slower but needs
 less space.
+
+//--------------------------------------------------------
+
+Understanding O(log n) complexity.
+
+So we understand it with the help of example:-
+
+Lets Imagine a Game: "Guess the Number"
+You’re playing a guessing game. Someone picks a number between 1 and 100, and your goal is to guess it. After every guess, you’re told:
+
+--If your guess is correct.
+--If the number is higher or lower than your guess.
+
+//--solving with strategies:-
+
+--Strategy 1: Guess Numbers One by One (O(n))
+If you start guessing numbers one by one, like 1, 2, 3, and so on:
+
+On the worst case, you may guess 100 times before getting the correct answer.
+This is O(n) because the number of guesses grows linearly with the size of the range (1 to 100).
+
+--Strategy 2: Be Smart with Binary Search (O(log n))
+Now, let’s be smart. Each time you guess, you split the range in half.
+
+First Guess: Start with the middle number, 50.
+If the number is higher, now you know it’s between 51 and 100.
+If it’s lower, it’s between 1 and 49.
+
+Second Guess: Take the middle of the new range (e.g., 75 or 25).
+Again, split the range in half.
+
+Third Guess: Keep halving the range until you find the correct number.
+
+By halving the range, you drastically reduce the number of guesses needed:
+
+For 100 numbers, you’ll only need 7 guesses (log₂(100) ≈ 7).
+For 1,000 numbers, you’ll need 10 guesses (log₂(1,000) ≈ 10).
+
+So in Logarithmic Growth which is O(log n): Every time the input size doubles, the number of steps increases by just 1. This is why O(log n) is much faster than O(n) for large inputs.
+In O(log n), each step reduces the problem size exponentially (by half). This is like cutting a pizza into smaller and smaller halves until you get the exact slice you want!
+
+We can understand logarithms (base-2 logarithm (log₂)) like this:- 
+"How many times can I divide the input by 2 before I get to 1?"
+
+Example: For an input of 16, log₂(16) = 4 because:
+16 → 8 → 4 → 2 → 1 (4 divisions).
+
+--Why is O(log n) Important in DSA?
+Many efficient algorithms (e.g., binary search, balanced trees, and divide-and-conquer) rely on halving the input repeatedly.
+This makes them scalable and much faster for large data.
+
+//--------------------------------------------------------
+
+Understanding O(n log n) complexity:-
+
+//O(n log n) means a process is split into two parts:
+--1. One part does O(log n) work (like dividing the problem in halves).
+--2. Another part does O(n) work (like looping through all items).
+Together, the total complexity becomes O(n) × O(log n) = O(n log n).
+
+
+//Let’s use a relatable example: Sorting is books name alphabetically by Merge Sort:-
+
+Imagine you have a list of names that you need to sort alphabetically.
+Let’s say there are n=8 names in the list. To sort them efficiently:
+
+list = ["John", "Alice", "Bob", "Zara", "Eve", "Charlie", "Tom", "Ann"]
+
+Step-1:- Divide the List (O(log n)):- Split the books into smaller and smaller piles (halving each time).
+
+First split: 8 → 4, 4
+Second split: 4 → 2, 2
+Third split: 2 → 1, 1
+It takes log₂(8) = 3 levels to divide the list fully.
+
+Step-2:- Process Each Level (O(n)):- Sort Each Pile (O(n)), Go through all the books in each pile and arrange them.
+
+Level 1: Compare and merge pairs (n = 8 comparisons).
+Level 2: Merge groups of 4 (n = 8 comparisons).
+Level 3: Merge groups of 8 (n = 8 comparisons).
+
+Even if you have 1,000 books, the splitting grows logarithmically, and the sorting at each level is linear, making the process efficient.
+
+// Common Use Cases of O(n log n)
+Sorting Algorithms: Merge Sort, Quick Sort, Heap Sort.
+Divide-and-Conquer Algorithms: Algorithms that split problems into smaller parts and then process each part.
+
+//Key Takeaway:
+O(log n): Halves the problem repeatedly.
+O(n log n): Applies the halving logic n times across all items, combining division and processing.

@@ -41,9 +41,9 @@ linear space complexity is denoted by O(n).
 
 
 Question 5 - What is Time Complexity of an algorithm?
-Answer - Time complexity is an METRICS used to analyze the performance of an algorithm. It includes program execution time. and time complexity is measured by the TOTAL AMOUNT OF TIME taken by the ALGORITHM to complete its execution.
+Answer - Time complexity is an METRIC used to analyze the performance of an algorithm. It includes program execution time. and time complexity is measured by the TOTAL AMOUNT OF TIME taken by the ALGORITHM to complete its execution.
 
-NOTE - when we calculate the time complexity of an algorithm we consider only input data. example:- we only check how our algorithm behaving for the different values to perform all the operations like asthmatic, logical, return value etc. we generally don't consider processor power, 32bit machine or 64bit, read write speed.
+NOTE - when we calculate the time complexity of an algorithm we consider only input data. example:- we only check how our algorithm behaving for the different values to perform all the operations like arithmetic, logical, return value etc. we generally don't consider processor power, 32bit machine or 64bit, read write speed.
 
 calculating time complexity in below example:-
  function add(a, b){
@@ -52,7 +52,7 @@ calculating time complexity in below example:-
     return a + b;
  }
 
- in above algorithm 1 unit time for "return" and 1 unit time for arthmatic "a+b" then total 2 unit of time for the algorithm execution and that time is fixed.
+ in above algorithm 1 unit time for "return" and 1 unit time for arithmetic "a+b" then total 2 unit of time for the algorithm execution and that time is fixed.
 
  -Time complexity can be calculated in two ways
  1) Constant time complexity
