@@ -1,0 +1,48 @@
+//Here we are learning some problem solving patterns.
+
+// Problem-solving patterns are structured approaches or techniques that help developers and programmers efficiently tackle a wide range of problems in data structures and algorithms (DSA). These patterns serve as reusable blueprints, offering clear steps and methodologies to break down complex problems into manageable parts.
+
+By understanding and mastering these patterns, learners can:
+
+Identify the most suitable approach for a given problem.
+Simplify problem analysis and implementation.
+Build a strong foundation for tackling real-world coding challenges.
+This file compiles some of the most commonly used problem-solving patterns, explaining their importance, when to apply them, and how they can streamline your problem-solving process. Whether you're a beginner or looking to refine your skills, these patterns will act as your guide to navigating the world of DSA with confidence.
+
+//So here we are discussing that to solve a problem we can have two different approaches.
+Approach-1. Device a plan for solving problems.
+Approach-2. Master common problem solving patterns.
+
+//So according to Approach 1 we can device our own plan to solve a particular problem and according the second approach we can use problem solving pattern to solve the problems.
+
+//there are some common patterns that we'll discuss that do apply to multiple problems that are common approaches to writing code sort of arch types or a problem. But that does not mean that you cover every possible scenario on earth. So it might help you in one out of five, one out of ten challenges you have to face. But even if it's only one out of ten, that's still helpful and worth knowing.
+//So there are lots of these patterns and some of them have names that are official. Some of them have names, well, not official, but names that are recognized by other people, like divide and conquer, for example, or greedy algorithms.
+
+//In this section, we have compiled a list of problem-solving patterns that can help you develop the skills needed to solve a wide range of problems effectively. Each pattern has been thoroughly explained in its dedicated file to ensure a deep and clear understanding.
+
+1. Frequency counter   
+2. Multiple pointers  
+3. Sliding window      
+4. Divide and Conquer  
+5. Dynamic Programming 
+6. Greedy Algorithm  
+7. BackTracking       
+8. Two Pointers 
+9. Fast & Slow Pointers
+10. Islands (Matrix Traversal)
+11. Merge Intervals
+12. Cyclic Sort
+13. In-place Reversal of a LinkedList
+14. Tree Breadth-First Search
+15. Tree Depth First Search
+16. Two Heaps
+17. Subsets
+18. Modified Binary Search
+19. Bitwise XOR
+20. Top ‘K’ Elements
+21. K-way Merge
+22. Topological Sort
+23. 0/1 Knapsack
+24 Fibonacci Numbers
+25. Palindromic Subsequence
+26. Longest Common Substring
