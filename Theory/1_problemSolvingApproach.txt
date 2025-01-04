@@ -1,0 +1,77 @@
+Problem-Solving Approach: Mastering the Art of Breaking Down Challenges.
+
+In this section, we focus on understanding and mastering the problem-solving approach, a crucial skill for excelling in data structures and algorithms (DSA). Problem-solving isn’t just about finding the right answer—it’s about developing a systematic mindset to analyze, plan, and implement solutions effectively. so lets start it with a simple question.
+
+ 1. How do you improve in problem solving?
+Answer - To improve problem solving we can go through two ways.
+
+Way 1 - Device a plan for solving problem:- 
+it is not very much technical but still it is about how do you approach a problem, strategies for breaking the problem into the steps.
+
+Way 2 - Master common problem solving patterns:- 
+So a lot of algorithms, especially in interviews, a lot of these problems that come up can be broken into sort of different categories. And if you can identify some of those categories, there are some steps you can take in your code. 
+            
+so there are Some helpful steps which can help you to solve the problem.
+--First step - Understand the problem.
+--Second Step - Explore concrete example.
+--Third Step - Break it down.
+--Fourth Step - Solve / Simplify the problem.
+--Fifth Step - Look back and Refactor.
+
+Understanding each steps:-
+
+First Step - Understand the problem:- to understand the problem we can go through some questions which we can ask from ourself or interviewer.
+ Q1 - Can I restate the problem in my own words?
+ Q2 - What are the inputs that go into the problem?
+ Q3 - What are the output that should come from the solution to the problem?
+ Q4 - Can the outputs be determined from the inputs? in other words, do i have enough information to solve the problem? (you may not be able to answer the until you set about solving the problem. That's ok; it's still worth considering the question at this early stage.)?
+ Q5 - How should i label the important pieces of data that are a part of the problem?
+         
+Second Step - Explore concrete example:- coming with examples can help you to understand the problem better. examples provide sanity checks that your eventual solution works how it should.
+some points you should consider for exploring concrete example.
+ a - Start with simple example.
+ b - Progress to more complex examples.
+ c - Explore example with empty inputs.
+ d - Explore examples with invalid inputs.
+
+Third Step - Break it down:- It means take the actual steps of the problem and write them down.
+Explicitly write down the steps you need to take, writing down the steps will force you to think about the code before you write it. and help you catch any lingering conceptual issues or misunderstandings before you dive in and worry about details (ex. language syntax) as well.
+
+Example:- For an example we are breaking down a problem here.
+
+problem - count the characters/latter in the given string
+         
+solution - 
+--first of all go through the first-step(understand the problem).
+--then go through the second-step(explore concrete example).
+--then third step breaking down the problem writing the steps like below
+
+    function charCount(){
+        1. create object to return at end.
+        2. loop over string, for each character...
+            a. in the first loop if char is number/latter AND is the key in object then add one to count.
+            b. in the next loop if char is number/latter AND is not the key in object then add it to object as a key set value to 1.
+            c. if character is something else (space, period, etc.) then don't do anything.
+        3. return object at end.   
+    }
+
+--Fourth Step - In fourth step we are simplifying the problem:-
+    a. Find the core difficulty in what you are trying to do.
+    b. Temporarily ignore that difficulty.
+    c. Write a simplified solution.
+    d. Then incorporate that difficulty back in.
+
+--Fifth Step - In fifth step we are refactoring the code by asking these questions from ourself.
+    Q1. Can you check the result?
+    Q2. Can you drive the result differently?
+    Q3. Can you understand it at a glance?
+    Q4. Can you use the result or method for some other problem?
+    Q5. Can you improve the performance of your solution?
+    Q6. Can you think of other ways to refactor?
+    Q7. How have other people solved this problem? 
+
+Tips for the DSA interview (these tips are gathered from various other platforms).
+1. Don't cram leetcode.
+2. it is about confidence.
+3. it is about conversational skill.
+4. it is about asking for help if needed (when you ask for the help from the interviewer it means you are telling that you want to get to the right answer).
