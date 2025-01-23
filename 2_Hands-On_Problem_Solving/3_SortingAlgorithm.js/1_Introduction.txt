@@ -1,0 +1,29 @@
+//Sorting Algorithms ⬆️⬇️
+Welcome to the Sorting Algorithms section of this DSA preparation repository!
+
+This folder contains explanations, examples, and implementations of fundamental Sorting algorithms that form the foundation of problem-solving in computer science. 
+
+//What are Sorting Algorithms?
+Sorting algorithms are fundamental to computer science, arranging elements of a list in a specific order (numerical, lexicographical, etc.). Efficient sorting is crucial for optimizing search and other algorithms that require ordered data.
+
+//We can classified these sorting algorithms in two category:-
+1. Comparison-based Sorting: These algorithms compare elements to determine their order.
+Examples: Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, Quick Sort, Heap Sort.
+2. Non-comparison-based Sorting: These algorithms use other techniques, like digit manipulation or indexing.
+Examples: Counting Sort, Radix Sort, Bucket Sort.
+
+What's Covered Here?
+Currently, we explore the following Sorting algorithms:
+1. Bubble Sort: Repeatedly compare adjacent elements and swap them if they are in the wrong order.
+2. Selection Sort: Repeatedly find the minimum element from the unsorted part and put it at the beginning.
+3. Insertion Sort: Build a sorted sublist by repeatedly inserting elements into their correct position.
+4. Comparison Sort: Comparison sorts arrange elements by repeatedly comparing pairs of elements and swapping them based on the comparison result.
+5. Merge Sort: Divide the list into halves, recursively sort them, and then merge the sorted halves.
+6. Quick Sort: Pick a 'pivot' element and partition the list around it, then recursively sort the sublists.
+7. Radix Sort: Sort elements digit by digit, using a stable sorting algorithm (like counting sort) for each digit.
+
+These algorithms are explained with easy-to-follow examples and code, making them beginner-friendly.
+
+--------------------------------------------------------
+
+Note:- By focusing on these, you'll cover all the critical sort techniques for DSA preparation.
