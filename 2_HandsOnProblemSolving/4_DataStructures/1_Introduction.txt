@@ -1,0 +1,33 @@
+//Data Structure 📚 
+Welcome to the Data Structure section of this DSA preparation repository!
+
+This folder contains explanations, examples, and implementations of  Data Structure that is used to store, retrieve, and manage data efficiently in computer science.
+
+//----------------------------------------
+
+//What is a Data Structure?
+A Data Structure is a way of organizing and storing data so that it can be accessed and modified efficiently. It defines the relationship between the data and the operations that can be performed on them.
+
+//----------------------------------------
+
+//Why Do We Use Data Structures?
+-Efficient Searching & Sorting (e.g., Binary Search on a sorted array is faster than a linear search)
+-Fast Data Access (e.g., Hash Tables allow quick lookups)
+-Memory Management (e.g., Linked Lists use memory dynamically)
+-Optimized Performance (e.g., Graphs & Trees help solve complex problems efficiently)
+
+//----------------------------------------
+
+//Types of Data Structures:- We can categorize data structure mainly in two category 1. Linear Data Structures, 2. Non-Linear Data Structures.
+
+1. ✅ Linear Data Structures (Elements are arranged sequentially, They can be traversed in a single run)
+1️⃣ Array – Fixed-size collection of elements (e.g., [1, 2, 3, 4])
+2️⃣ Linked List – Nodes connected with pointers (e.g., 1 → 2 → 3 → 4)
+3️⃣ Stack – LIFO (Last In, First Out) (e.g., Undo operation)
+4️⃣ Queue – FIFO (First In, First Out) (e.g., Print job scheduling)
+
+2. ✅ Non-Linear Data Structures (Elements are not arranged sequentially, They may have hierarchical or complex relationships)
+1️⃣ Tree – Hierarchical structure (e.g., Binary Search Tree)
+2️⃣ Graph – Nodes connected by edges (e.g., Social Network)
+3️⃣ Hash Table / HashMap – Key-value pairs (e.g., { "name": "Alice", "age": 25 })
+4️⃣ Matrix 🏁 (2D grid structure, often used in mathematical and graphical computations)
